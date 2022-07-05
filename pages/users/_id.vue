@@ -6,8 +6,8 @@
 
 <script>
 export default{
-  validate(context){
-    return /^\d+$/.test(context.params.id)
+  validate({params}){
+    return /^\d+$/.test(params.id)
   }
 }
 </script>
