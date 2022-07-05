@@ -1,5 +1,5 @@
 <template>
 <div class="">
-  <h1>Helllo User Id: X</h1>
+  <h1>Helllo User Id: {{ $route.params.id }}</h1>
 </div>
 </template>
