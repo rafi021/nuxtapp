@@ -18,6 +18,24 @@
 
 <script>
 import axios from 'axios';
+export default{
+  data(){
+    return {
+      posts: ''
+    }
+  },
+  asyncData(context){
+    return axios.get('https://jsonplaceholder.typicode.com/posts')
+    .then((response) => {
+      return {posts: response.data}
+    })
+  }
+}
+</script>
+
+
+<!-- <script>
+import axios from 'axios';
 
 export default{
   data() {
@@ -25,6 +43,7 @@ export default{
       posts: []
     }
   },
+
   mounted() {
     axios.get('https://jsonplaceholder.typicode.com/posts')
     .then(response => {
@@ -35,9 +54,11 @@ export default{
       console.log(error)
     })
   },
+
+
   methods: {
 
   }
 }
 
-</script>
+</script> -->
