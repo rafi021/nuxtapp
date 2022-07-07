@@ -25,8 +25,8 @@ export default{
     }
   },
   async asyncData(context){
-    let response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-    return { posts: response.data }
+    let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    return { posts: data }
   }
 }
 </script>
