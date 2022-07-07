@@ -1,6 +1,6 @@
 <template>
 <div class="">
-  <h2>Making API request - the vue way</h2>
+  <h2>Making API request - the nuxt way</h2>
   <div class="container">
     <div class="row">
       <div class="col-12 mb-2" v-for="post in posts" :key="post.id">
