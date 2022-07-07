@@ -1,0 +1,10 @@
+body{
+  background-color: azure;
+}
+
+.jumbotron{
+  border-radius: 0px;
+  background-image: url("https://cdn.pixabay.com/photo/2022/07/04/14/52/sea-7301366_960_720.jpg");
+  height: 300px;
+  background-size: cover;
+}
