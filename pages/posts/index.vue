@@ -24,11 +24,9 @@ export default{
       posts: ''
     }
   },
-  asyncData(context){
-    return axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then((response) => {
-      return {posts: response.data}
-    })
+  async asyncData(context){
+    let response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+    return { posts: response.data }
   }
 }
 </script>
