@@ -1,40 +1,38 @@
 <template>
-<div class="">
-  <h2>Making API request - the nuxt way</h2>
-  <div class="container">
-    <div class="row">
-      <div class="col-12 mb-2" v-for="post in posts" :key="post.id">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title">{{ post.title }}</h2>
-            <p class="card-text">{{ post.body }}</p>
-          </div>
+  <div class="">
+    <h2>Making API request - the nuxt way</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mb-2">
+          <PostItemVue v-for="post in posts" :key="post.id" :post="post"/>
         </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 import axios from 'axios';
-export default{
-  data(){
+import PostItemVue from '~/components/PostItem.vue';
+export default {
+  components: {
+    PostItemVue
+  },
+  data() {
     return {
-      posts: ''
+      posts: '',
     }
   },
-  async asyncData(context){
-    let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts');
+  async asyncData(context) {
+    let { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
     return { posts: data }
   },
 
   head: {
-    title: 'List of Posts'
-  }
+    title: 'List of Posts',
+  },
 }
 </script>
-
 
 <!-- <script>
 import axios from 'axios';
