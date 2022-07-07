@@ -11,6 +11,9 @@
           <nuxt-link class="nav-link active" aria-current="page" to="/">Home</nuxt-link>
         </li>
         <li class="nav-item">
+          <nuxt-link class="nav-link" to="posts">Posts</nuxt-link>
+        </li>
+        <li class="nav-item">
           <nuxt-link class="nav-link" to="users">Users</nuxt-link>
         </li>
       </ul>
