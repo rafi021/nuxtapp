@@ -13,7 +13,7 @@
 
 <script>
 import axios from 'axios';
-import PostItemVue from '~/components/PostItem.vue';
+import PostItemVue from '~/components/PostItems.vue';
 export default {
   components: {
     PostItemVue
