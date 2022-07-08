@@ -32,7 +32,12 @@ export default {
     //   return this.$store.getters.posts;
     // }
   },
-  async asyncData({store}) {
+
+  // asyncData with synce with components
+  // fetch method witll not synce with components, it is better use with vuex dispatch method
+
+
+  async fetch({store}) {
     let { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
     // return { posts: data }
     store.dispatch('setPosts', data);
