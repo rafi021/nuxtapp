@@ -14,14 +14,23 @@
 <script>
 import axios from 'axios';
 import PostItemVue from '~/components/PostItems.vue';
+
+import { mapGetters } from 'vuex'
+
 export default {
   components: {
     PostItemVue
   },
   data() {
     return {
-      posts: '',
+      allPosts: '',
     }
+  },
+  computed: {
+    ...mapGetters(['posts'])
+    // allPosts(){
+    //   return this.$store.getters.posts;
+    // }
   },
   async asyncData({store}) {
     let { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
