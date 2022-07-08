@@ -7,6 +7,7 @@
           <PostItemVue v-for="post in posts" :key="post.id" :post="post"/>
         </div>
       </div>
+      <button class="btn btn-danger" v-scroll-to="'body'">Back to top</button>
     </div>
   </div>
 </template>
