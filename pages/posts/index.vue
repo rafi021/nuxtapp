@@ -23,9 +23,10 @@ export default {
       posts: '',
     }
   },
-  async asyncData(context) {
+  async asyncData({store}) {
     let { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
-    return { posts: data }
+    // return { posts: data }
+    store.dispatch('setPosts', data);
   },
 
   head: {
